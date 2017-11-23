@@ -21,7 +21,7 @@ produces:
 paths:
   /balances:
     get:
-      description: 'TODO: Add Description'
+      description: Retrieve customer balances by http GET
       summary: Customer/balances
       tags:
       - Misc

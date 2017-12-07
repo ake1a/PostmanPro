@@ -26,7 +26,7 @@ paths:
       summary: /v1/oauth_nl/token Get WSO2 auth token - Step 1
       tags:
       - Misc
-      operationId: /v1/oauth_nl/token Get WSO2 auth token - Step 1
+      operationId: NlV1OauthNlTokenPost
       produces:
       - application/json
       consumes:
@@ -145,7 +145,7 @@ paths:
       summary: /v1/orders/search
       tags:
       - Misc
-      operationId: /v1/orders/search
+      operationId: V1OrdersSearchPost
       produces:
       - application/json
       parameters:

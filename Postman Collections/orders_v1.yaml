@@ -250,30 +250,39 @@ definitions:
     properties:
       uid:
         description: ''
+        example: 401203
         type: string
       token_type:
         description: ''
+        example: bearer
         type: string
       expires_in:
         description: ''
+        example: 2400
         type: string
       refresh_token:
         description: ''
+        example: 7bcbf7def9e2da21a4bbef6ef546e4
         type: string
       access_token:
         description: ''
+        example: 9f421e6e25599c53abdcede3dc35f8
         type: string
       customer_type:
         description: ''
+        example: 4G/LTE
         type: string
       status:
         description: ''
+        example: 200
         type: string
       email:
         description: ''
+        example: anamewpcftjgnsk16s11ptest0011@tele2.com
         type: string
       role:
         description: ''
+        example: Consumer
         type: string
       msisdn:
         description: ''
@@ -283,6 +292,13 @@ definitions:
         type: string
       applicationLinks:
         description: ''
+        example:
+        - id: 10313378919
+          application: brite:bill
+        - id: 10313378918
+          application: siebel
+        - id: ''
+          application: cbs
         type: array
         items:
           $ref: '#/definitions/ApplicationLink'
@@ -301,13 +317,18 @@ definitions:
     - applicationLinks
   ApplicationLink:
     title: ApplicationLink
+    example:
+      id: 10313378919
+      application: brite:bill
     type: object
     properties:
       id:
         description: ''
+        example: 10313378919
         type: string
       application:
         description: ''
+        example: brite:bill
         type: string
     required:
     - id
@@ -332,31 +353,82 @@ definitions:
     properties:
       CustomerOrderSearchRequest:
         $ref: '#/definitions/CustomerOrderSearchRequest'
+        example:
+          OrderHeader:
+            OrderId: 456
+            Active: Y
+            OrderType:
+            - MSISDN Swap Order
+            - Sales Order
+            OrderSubType: ''
+            OrderStatus: IN_PROGRESS
+          OrderItem:
+            ProductType: ''
+            SubStatus: ''
+            Status: ''
     required:
     - CustomerOrderSearchRequest
   CustomerOrderSearchRequest:
     title: CustomerOrderSearchRequest
+    example:
+      OrderHeader:
+        OrderId: 456
+        Active: Y
+        OrderType:
+        - MSISDN Swap Order
+        - Sales Order
+        OrderSubType: ''
+        OrderStatus: IN_PROGRESS
+      OrderItem:
+        ProductType: ''
+        SubStatus: ''
+        Status: ''
     type: object
     properties:
       OrderHeader:
         $ref: '#/definitions/OrderHeader'
+        example:
+          OrderId: 456
+          Active: Y
+          OrderType:
+          - MSISDN Swap Order
+          - Sales Order
+          OrderSubType: ''
+          OrderStatus: IN_PROGRESS
       OrderItem:
         $ref: '#/definitions/OrderItem'
+        example:
+          ProductType: ''
+          SubStatus: ''
+          Status: ''
     required:
     - OrderHeader
     - OrderItem
   OrderHeader:
     title: OrderHeader
+    example:
+      OrderId: 456
+      Active: Y
+      OrderType:
+      - MSISDN Swap Order
+      - Sales Order
+      OrderSubType: ''
+      OrderStatus: IN_PROGRESS
     type: object
     properties:
       OrderId:
         description: ''
+        example: 456
         type: string
       Active:
         description: ''
+        example: Y
         type: string
       OrderType:
         description: ''
+        example:
+        - MSISDN Swap Order
+        - Sales Order
         type: array
         items:
           type: string
@@ -365,6 +437,7 @@ definitions:
         type: string
       OrderStatus:
         description: ''
+        example: IN_PROGRESS
         type: string
     required:
     - OrderId
@@ -374,6 +447,10 @@ definitions:
     - OrderStatus
   OrderItem:
     title: OrderItem
+    example:
+      ProductType: ''
+      SubStatus: ''
+      Status: ''
     type: object
     properties:
       ProductType:
@@ -404,44 +481,73 @@ definitions:
     properties:
       Status:
         $ref: '#/definitions/Status'
+        example:
+          StatusName: FAILURE
+          StatusReason: No orders found
       PagingAndSorting:
         $ref: '#/definitions/PagingAndSorting'
+        example:
+          PageData:
+            PageSize: 20
+            TotalPages: 0
+            Index: 1
     required:
     - Status
     - PagingAndSorting
   Status:
     title: Status
+    example:
+      StatusName: FAILURE
+      StatusReason: No orders found
     type: object
     properties:
       StatusName:
         description: ''
+        example: FAILURE
         type: string
       StatusReason:
         description: ''
+        example: No orders found
         type: string
     required:
     - StatusName
     - StatusReason
   PagingAndSorting:
     title: PagingAndSorting
+    example:
+      PageData:
+        PageSize: 20
+        TotalPages: 0
+        Index: 1
     type: object
     properties:
       PageData:
         $ref: '#/definitions/PageData'
+        example:
+          PageSize: 20
+          TotalPages: 0
+          Index: 1
     required:
     - PageData
   PageData:
     title: PageData
+    example:
+      PageSize: 20
+      TotalPages: 0
+      Index: 1
     type: object
     properties:
       PageSize:
         description: ''
+        example: 20
         type: string
       TotalPages:
         description: ''
+        example: 0
         type: string
       Index:
         description: ''
+        example: 1
         type: string
     required:
     - PageSize

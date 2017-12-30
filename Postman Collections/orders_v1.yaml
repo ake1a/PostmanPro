@@ -353,19 +353,6 @@ definitions:
     properties:
       CustomerOrderSearchRequest:
         $ref: '#/definitions/CustomerOrderSearchRequest'
-        example:
-          OrderHeader:
-            OrderId: 456
-            Active: Y
-            OrderType:
-            - MSISDN Swap Order
-            - Sales Order
-            OrderSubType: ''
-            OrderStatus: IN_PROGRESS
-          OrderItem:
-            ProductType: ''
-            SubStatus: ''
-            Status: ''
     required:
     - CustomerOrderSearchRequest
   CustomerOrderSearchRequest:
@@ -387,20 +374,8 @@ definitions:
     properties:
       OrderHeader:
         $ref: '#/definitions/OrderHeader'
-        example:
-          OrderId: 456
-          Active: Y
-          OrderType:
-          - MSISDN Swap Order
-          - Sales Order
-          OrderSubType: ''
-          OrderStatus: IN_PROGRESS
       OrderItem:
         $ref: '#/definitions/OrderItem'
-        example:
-          ProductType: ''
-          SubStatus: ''
-          Status: ''
     required:
     - OrderHeader
     - OrderItem
@@ -481,16 +456,8 @@ definitions:
     properties:
       Status:
         $ref: '#/definitions/Status'
-        example:
-          StatusName: FAILURE
-          StatusReason: No orders found
       PagingAndSorting:
         $ref: '#/definitions/PagingAndSorting'
-        example:
-          PageData:
-            PageSize: 20
-            TotalPages: 0
-            Index: 1
     required:
     - Status
     - PagingAndSorting
@@ -523,10 +490,6 @@ definitions:
     properties:
       PageData:
         $ref: '#/definitions/PageData'
-        example:
-          PageSize: 20
-          TotalPages: 0
-          Index: 1
     required:
     - PageData
   PageData:

@@ -93,7 +93,41 @@ paths:
               - id: ''
                 application: cbs
       security: []
-      x-unitTests: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /nl/v1/oauth_nl/token
+          headers:
+            Content-Type: application/x-www-form-urlencoded
+            X-Api-Key: OUGIuUc9RpSDTocY97cMbcqACdTVAPTu
+          body: client_id=DD1hEBiTeEfoP4jjXSraecgMa4wa&client_secret=mclN7iVfJ7PnGB4Ev8HmdCM1zwAa&grant_type=password&username=anamewpcftjgnsk16s11ptest0011@tele2.com&password=Test1234!
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: RAW
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Access-Control-Allow-Headers: authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction
+            Access-Control-Allow-Methods: DELETE,POST,PUT,GET
+            Access-Control-Allow-Origin: '*'
+            Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+            Connection: keep-alive
+            Content-Type: application/json
+            Date: Tue, 14 Nov 2017 14:43:44 GMT
+            Expires: 0
+            Pragma: no-cache
+            Server: WSO2-PassThrough-HTTP
+            Transfer-Encoding: chunked
+            X-Application-Context: application:uat:6060
+            X-Content-Type-Options: nosniff
+            X-Frame-Options: SAMEORIGIN
+            X-XSS-Protection: 1; mode=block
+          body: "{\n    \"uid\": \"401203\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": \"2400\",\n    \"refresh_token\": \"7bcbf7def9e2da21a4bbef6ef546e4\",\n    \"access_token\": \"9f421e6e25599c53abdcede3dc35f8\",\n    \"customer_type\": \"4G/LTE\",\n    \"status\": \"200\",\n    \"email\": \"anamewpcftjgnsk16s11ptest0011@tele2.com\",\n	\"role\": \"Consumer\",\n    \"msisdn\": \"\",\n    \"resellerShopId\": \"\",\n	\"applicationLinks\": [\n		{\n			\"id\": \"10313378919\",\n			\"application\": \"brite:bill\"\n		},\n		{\n			\"id\": \"10313378918\",\n			\"application\": \"siebel\"\n		},\n		{\n			\"id\": \"\",\n			\"application\": \"cbs\"\n		}\n	]\n}        \n      	"
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: /v1/oauth_nl/token Get WSO2 auth token - Step 1
+        x-testDescription: This API must be used to authenticate the user.
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false
@@ -152,7 +186,39 @@ paths:
                   TotalPages: 0
                   Index: 1
       security: []
-      x-unitTests: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /v1/orders/search
+          headers:
+            Content-Type: application/json
+            X-Api-Key: OUGIuUc9RpSDTocY97cMbcqACdTVAPTu
+            Authorization: 9f421e6e25599c53abdcede3dc35f8
+          body: "{  \r\n   \"CustomerOrderSearchRequest\":{  \r\n      \"OrderHeader\":{  \r\n         \"OrderId\":\"456\",\r\n         \"Active\":\"Y\",\r\n         \"OrderType\":[  \r\n            \"MSISDN Swap Order\",\r\n            \"Sales Order\"\r\n         ],\r\n         \"OrderSubType\":\"\",\r\n         \"OrderStatus\":\"IN_PROGRESS\"\r\n      },\r\n      \"OrderItem\":{  \r\n         \"ProductType\":\"\",\r\n         \"SubStatus\":\"\",\r\n         \"Status\":\"\"\r\n      }\r\n   }\r\n}"
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: RAW
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Connection: keep-alive
+            Content-Length: 147
+            Content-Type: application/json
+            ConversationId: 3a9f9ec7-46d7-472b-813d-2a2e7166d0aa
+            Date: Tue, 14 Nov 2017 14:38:01 GMT
+            Server: Apigee Router
+          body: '{"Status":{"StatusName":"FAILURE","StatusReason":"No orders found"},"PagingAndSorting":{"PageData":{"PageSize":"20","TotalPages":"0","Index":"1"}}}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: /v1/orders/search
+        x-testDescription: >-
+          Gets the product detils for the customer.
+
+
+          Note:
+
+           Please get the latest access token before sending the request using the 'Get WSO2 auth token - Step 1' service present in the same folder.
       x-operation-settings:
         CollectParameters: false
         AllowDynamicQueryParameters: false

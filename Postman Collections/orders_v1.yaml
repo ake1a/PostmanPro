@@ -8,9 +8,6 @@ info:
     Consumer: My Tele2 NL
 
     Provider: TIP; Siebel_NL
-  license:
-    name: MIT
-    url: http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
 host: api.tele2.com:9006
 basePath: /
 schemes:

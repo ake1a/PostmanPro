@@ -68,7 +68,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/~1v1~1oauthNl~1token get wso2 auth token - step 1response'
+            $ref: '#/definitions/GetWso2AuthTokenOk'
           examples:
             application/json:
               uid: 401203
@@ -171,7 +171,7 @@ paths:
         200:
           description: ''
           schema:
-            $ref: '#/definitions/~1v1~1orders~1searchresponse'
+            $ref: '#/definitions/NoOrdersFoundBusinessException'
           examples:
             application/json:
               Status:
@@ -222,8 +222,8 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
 definitions:
-  /v1/oauthNl/token get wso2 auth token - step 1response:
-    title: /v1/oauth_nl/token Get WSO2 auth token - Step 1Response
+  GetWso2AuthTokenOk:
+    title: Get WSO2 auth token OK
     example:
       uid: 401203
       token_type: bearer
@@ -438,8 +438,8 @@ definitions:
     - ProductType
     - SubStatus
     - Status
-  /v1/orders/searchresponse:
-    title: /v1/orders/searchResponse
+  NoOrdersFoundBusinessException:
+    title: No orders found business exception
     example:
       Status:
         StatusName: FAILURE

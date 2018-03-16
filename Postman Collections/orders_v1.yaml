@@ -120,7 +120,7 @@ paths:
             X-Content-Type-Options: nosniff
             X-Frame-Options: SAMEORIGIN
             X-XSS-Protection: 1; mode=block
-          body: "{\n    \"uid\": \"401203\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": \"2400\",\n    \"refresh_token\": \"7bcbf7def9e2da21a4bbef6ef546e4\",\n    \"access_token\": \"9f421e6e25599c53abdcede3dc35f8\",\n    \"customer_type\": \"4G/LTE\",\n    \"status\": \"200\",\n    \"email\": \"anamewpcftjgnsk16s11ptest0011@tele2.com\",\n	\"role\": \"Consumer\",\n    \"msisdn\": \"\",\n    \"resellerShopId\": \"\",\n	\"applicationLinks\": [\n		{\n			\"id\": \"10313378919\",\n			\"application\": \"brite:bill\"\n		},\n		{\n			\"id\": \"10313378918\",\n			\"application\": \"siebel\"\n		},\n		{\n			\"id\": \"\",\n			\"application\": \"cbs\"\n		}\n	]\n}        \n      	"
+          body: '{"uid":"401203","token_type":"bearer","expires_in":"2400","refresh_token":"7bcbf7def9e2da21a4bbef6ef546e4","access_token":"9f421e6e25599c53abdcede3dc35f8","customer_type":"4G/LTE","status":"200","email":"anamewpcftjgnsk16s11ptest0011@tele2.com","role":"Consumer","msisdn":"","resellerShopId":"","applicationLinks":[{"id":"10313378919","application":"brite:bill"},{"id":"10313378918","application":"siebel"},{"id":"","application":"cbs"}]}'
         x-testShouldPass: true
         x-testEnabled: true
         x-testName: /v1/oauth_nl/token Get WSO2 auth token - Step 1
@@ -191,7 +191,7 @@ paths:
             Content-Type: application/json
             X-Api-Key: OUGIuUc9RpSDTocY97cMbcqACdTVAPTu
             Authorization: 9f421e6e25599c53abdcede3dc35f8
-          body: "{  \r\n   \"CustomerOrderSearchRequest\":{  \r\n      \"OrderHeader\":{  \r\n         \"OrderId\":\"456\",\r\n         \"Active\":\"Y\",\r\n         \"OrderType\":[  \r\n            \"MSISDN Swap Order\",\r\n            \"Sales Order\"\r\n         ],\r\n         \"OrderSubType\":\"\",\r\n         \"OrderStatus\":\"IN_PROGRESS\"\r\n      },\r\n      \"OrderItem\":{  \r\n         \"ProductType\":\"\",\r\n         \"SubStatus\":\"\",\r\n         \"Status\":\"\"\r\n      }\r\n   }\r\n}"
+          body: '{"CustomerOrderSearchRequest":{"OrderHeader":{"OrderId":"456","Active":"Y","OrderType":["MSISDN Swap Order","Sales Order"],"OrderSubType":"","OrderStatus":"IN_PROGRESS"},"OrderItem":{"ProductType":"","SubStatus":"","Status":""}}}'
         expectedResponse:
           x-allowExtraHeaders: true
           x-bodyMatchMode: RAW

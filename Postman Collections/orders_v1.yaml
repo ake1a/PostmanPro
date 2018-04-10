@@ -162,11 +162,6 @@ paths:
         required: true
         type: string
         description: ''
-      - name: Authorization
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -182,7 +177,6 @@ paths:
                   PageSize: 20
                   TotalPages: 0
                   Index: 1
-      security: []
       x-unitTests:
       - request:
           method: POST
@@ -190,7 +184,6 @@ paths:
           headers:
             Content-Type: application/json
             X-Api-Key: OUGIuUc9RpSDTocY97cMbcqACdTVAPTu
-            Authorization: 9f421e6e25599c53abdcede3dc35f8
           body: '{"CustomerOrderSearchRequest":{"OrderHeader":{"OrderId":"456","Active":"Y","OrderType":["MSISDN Swap Order","Sales Order"],"OrderSubType":"","OrderStatus":"IN_PROGRESS"},"OrderItem":{"ProductType":"","SubStatus":"","Status":""}}}'
         expectedResponse:
           x-allowExtraHeaders: true

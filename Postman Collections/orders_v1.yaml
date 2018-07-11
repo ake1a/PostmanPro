@@ -29,6 +29,16 @@ paths:
       consumes:
       - application/x-www-form-urlencoded
       parameters:
+      - name: X-Api-Key
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
       - name: client_id
         in: formData
         required: true
@@ -54,16 +64,6 @@ paths:
         required: true
         type: string
         description: This field should contain the password. It is required when the grant type is password.
-      - name: X-Api-Key
-        in: header
-        required: true
-        type: string
-        description: ''
-      - name: Content-Type
-        in: header
-        required: true
-        type: string
-        description: ''
       responses:
         200:
           description: ''
@@ -95,8 +95,8 @@ paths:
           method: POST
           uri: /nl/v1/oauth_nl/token
           headers:
-            Content-Type: application/x-www-form-urlencoded
             X-Api-Key: OUGIuUc9RpSDTocY97cMbcqACdTVAPTu
+            Content-Type: application/x-www-form-urlencoded
           body: client_id=DD1hEBiTeEfoP4jjXSraecgMa4wa&client_secret=mclN7iVfJ7PnGB4Ev8HmdCM1zwAa&grant_type=password&username=anamewpcftjgnsk16s11ptest0011@tele2.com&password=Test1234!
         expectedResponse:
           x-allowExtraHeaders: true
@@ -146,12 +146,6 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: Body
-        in: body
-        required: true
-        description: ''
-        schema:
-          $ref: '#/definitions/~1v1~1orders~1searchrequest'
       - name: X-Api-Key
         in: header
         required: true
@@ -162,6 +156,12 @@ paths:
         required: true
         type: string
         description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/~1v1~1orders~1searchrequest'
       responses:
         200:
           description: ''
@@ -182,8 +182,8 @@ paths:
           method: POST
           uri: /v1/orders/search
           headers:
-            Content-Type: application/json
             X-Api-Key: OUGIuUc9RpSDTocY97cMbcqACdTVAPTu
+            Content-Type: application/json
           body: '{"CustomerOrderSearchRequest":{"OrderHeader":{"OrderId":"456","Active":"Y","OrderType":["MSISDN Swap Order","Sales Order"],"OrderSubType":"","OrderStatus":"IN_PROGRESS"},"OrderItem":{"ProductType":"","SubStatus":"","Status":""}}}'
         expectedResponse:
           x-allowExtraHeaders: true

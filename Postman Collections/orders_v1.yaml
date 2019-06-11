@@ -203,6 +203,7 @@ paths:
             Server:
               type: string
               default: Apigee Router
+      security: []
 definitions:
   GetWSO2authtokenOK:
     title: GetWSO2authtokenOK

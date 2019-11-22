@@ -24,7 +24,7 @@ paths:
       summary: /v1/oauth_nl/token Get WSO2 auth token - Step 1
       tags:
       - Misc
-      operationId: NlV1OauthNlTokenPost
+      operationId: /v1/oauth_nl/tokenGetWSO2authtoken-Step1
       deprecated: false
       produces:
       - application/json
@@ -146,7 +146,7 @@ paths:
       summary: /v1/orders/search
       tags:
       - Misc
-      operationId: V1OrdersSearchPost
+      operationId: /v1/orders/search
       deprecated: false
       produces:
       - application/json

@@ -150,6 +150,8 @@ paths:
       deprecated: false
       produces:
       - application/json
+      consumes:
+      - application/json
       parameters:
       - name: X-Api-Key
         in: header

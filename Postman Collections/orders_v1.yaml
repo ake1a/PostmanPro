@@ -68,7 +68,7 @@ paths:
         description: This field should contain the password. It is required when the grant type is password.
       responses:
         200:
-          description: ''
+          description: OK
           schema:
             $ref: '#/definitions/GetWSO2authtokenOK'
           examples:
@@ -176,7 +176,7 @@ paths:
           $ref: '#/definitions/~1v1~1orders~1searchrequest'
       responses:
         200:
-          description: ''
+          description: reachable
           schema:
             $ref: '#/definitions/Noordersfoundbusinessexception'
           examples:

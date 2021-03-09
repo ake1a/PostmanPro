@@ -1,360 +1,447 @@
-{
-  "info": {
-    "_postman_id": "3217855-0724646b-e350-6103-5210-6de87440d9b9",
-    "name": "orders_v1",
-    "description": "Collection to test orders_v1 API Proxy\nConsumer: My Tele2 NL\nProvider: TIP; Siebel_NL\n",
-    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "/v1/oauth_nl/token Get WSO2 auth token - Step 1",
-      "_postman_id": "3217855-81bdebab-768d-d0df-f046-4151e4da53be",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "X-Api-Key",
-            "value": "OUGIuUc9RpSDTocY97cMbcqACdTVAPTu",
-            "description": "Authorization from calling system"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/x-www-form-urlencoded",
-            "description": "The value should be 'application/x-www-form-urlencoded'"
-          }
-        ],
-        "body": {
-          "mode": "urlencoded",
-          "urlencoded": [
-            {
-              "key": "client_id",
-              "value": "DD1hEBiTeEfoP4jjXSraecgMa4wa",
-              "type": "text",
-              "description": "This field requires to have client id, this should be requested and provide by appigee/WSO2"
-            },
-            {
-              "key": "client_secret",
-              "value": "mclN7iVfJ7PnGB4Ev8HmdCM1zwAa",
-              "type": "text",
-              "description": "This field requires to have client secret, this should be requested and provide by appigee/WSO2."
-            },
-            {
-              "key": "grant_type",
-              "value": "password",
-              "type": "text",
-              "description": "The values that can be send in this field is 'refresh_token' or 'password'."
-            },
-            {
-              "key": "username",
-              "value": "anamewpcftjgnsk16s11ptest0011@tele2.com",
-              "type": "text",
-              "description": "This field should contain the username. It is required when the grant type is password."
-            },
-            {
-              "key": "password",
-              "value": "Test1234!",
-              "type": "text",
-              "description": " This field should contain the password. It is required when the grant type is password."
-            }
-          ]
-        },
-        "url": "https://api.tele2.com:9006/nl/v1/oauth_nl/token",
-        "description": "This API must be used to authenticate the user."
-      },
-      "response": [
-        {
-          "id": "3217855-82feed0d-9ae8-312b-da1a-1f626df6aac5",
-          "name": "Get WSO2 auth token OK",
-          "originalRequest": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "X-Api-Key",
-                "value": "OUGIuUc9RpSDTocY97cMbcqACdTVAPTu"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "client_id",
-                  "value": "DD1hEBiTeEfoP4jjXSraecgMa4wa",
-                  "type": "text"
-                },
-                {
-                  "key": "client_secret",
-                  "value": "mclN7iVfJ7PnGB4Ev8HmdCM1zwAa",
-                  "type": "text"
-                },
-                {
-                  "key": "grant_type",
-                  "value": "password",
-                  "type": "text"
-                },
-                {
-                  "key": "username",
-                  "value": "anamewpcftjgnsk16s11ptest0011@tele2.com",
-                  "type": "text"
-                },
-                {
-                  "key": "password",
-                  "value": "Test1234!",
-                  "type": "text"
-                }
-              ]
-            },
-            "url": "https://api.tele2.com:9006/nl/v1/oauth_nl/token"
-          },
-          "status": "OK",
-          "code": 200,
-          "_postman_previewlanguage": "json",
-          "header": [
-            {
-              "key": "Access-Control-Allow-Headers",
-              "value": "authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction",
-              "name": "Access-Control-Allow-Headers",
-              "description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
-            },
-            {
-              "key": "Access-Control-Allow-Methods",
-              "value": "DELETE,POST,PUT,GET",
-              "name": "Access-Control-Allow-Methods",
-              "description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
-            },
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*",
-              "name": "Access-Control-Allow-Origin",
-              "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
-            },
-            {
-              "key": "Cache-Control",
-              "value": "no-cache, no-store, max-age=0, must-revalidate",
-              "name": "Cache-Control",
-              "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-            },
-            {
-              "key": "Connection",
-              "value": "keep-alive",
-              "name": "Connection",
-              "description": "Options that are desired for the connection"
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json",
-              "name": "Content-Type",
-              "description": "The mime type of this content"
-            },
-            {
-              "key": "Date",
-              "value": "Tue, 14 Nov 2017 14:43:44 GMT",
-              "name": "Date",
-              "description": "The date and time that the message was sent"
-            },
-            {
-              "key": "Expires",
-              "value": "0",
-              "name": "Expires",
-              "description": "Gives the date/time after which the response is considered stale"
-            },
-            {
-              "key": "Pragma",
-              "value": "no-cache",
-              "name": "Pragma",
-              "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
-            },
-            {
-              "key": "Server",
-              "value": "WSO2-PassThrough-HTTP",
-              "name": "Server",
-              "description": "A name for the server"
-            },
-            {
-              "key": "Transfer-Encoding",
-              "value": "chunked",
-              "name": "Transfer-Encoding",
-              "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-            },
-            {
-              "key": "X-Application-Context",
-              "value": "application:uat:6060",
-              "name": "X-Application-Context",
-              "description": "Custom header"
-            },
-            {
-              "key": "X-Content-Type-Options",
-              "value": "nosniff",
-              "name": "X-Content-Type-Options",
-              "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-            },
-            {
-              "key": "X-Frame-Options",
-              "value": "SAMEORIGIN",
-              "name": "X-Frame-Options",
-              "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-            },
-            {
-              "key": "X-Frame-Options",
-              "value": "DENY",
-              "name": "X-Frame-Options",
-              "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-            },
-            {
-              "key": "X-XSS-Protection",
-              "value": "1; mode=block",
-              "name": "X-XSS-Protection",
-              "description": "Cross-site scripting (XSS) filter"
-            }
-          ],
-          "cookie": [
-            {
-              "expires": "Invalid Date",
-              "httpOnly": false,
-              "domain": "api.tele2.com",
-              "path": "/",
-              "secure": false,
-              "value": "EGAKKIMAFAAA",
-              "key": "lb-cook-47873-wsoapim-64.240-sg-80"
-            },
-            {
-              "expires": "Invalid Date",
-              "httpOnly": true,
-              "domain": "api.tele2.com",
-              "path": "/",
-              "secure": false,
-              "value": "9421b080d10d1c038c08ffffffd6b994",
-              "key": "ssnid"
-            }
-          ],
-          "responseTime": "851",
-          "body": "{\n    \"uid\": \"401203\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": \"2400\",\n    \"refresh_token\": \"7bcbf7def9e2da21a4bbef6ef546e4\",\n    \"access_token\": \"9f421e6e25599c53abdcede3dc35f8\",\n    \"customer_type\": \"4G/LTE\",\n    \"status\": \"200\",\n    \"email\": \"anamewpcftjgnsk16s11ptest0011@tele2.com\",\n\t\"role\": \"Consumer\",\n    \"msisdn\": \"\",\n    \"resellerShopId\": \"\",\n\t\"applicationLinks\": [\n\t\t{\n\t\t\t\"id\": \"10313378919\",\n\t\t\t\"application\": \"brite:bill\"\n\t\t},\n\t\t{\n\t\t\t\"id\": \"10313378918\",\n\t\t\t\"application\": \"siebel\"\n\t\t},\n\t\t{\n\t\t\t\"id\": \"\",\n\t\t\t\"application\": \"cbs\"\n\t\t}\n\t]\n}        \n      \t"
-        }
-      ]
-    },
-    {
-      "name": "/v1/orders/search",
-      "_postman_id": "3217855-af7740b7-b96a-0324-2164-e12aaab71b87",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "X-Api-Key",
-            "value": "OUGIuUc9RpSDTocY97cMbcqACdTVAPTu"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "Authorization",
-            "value": "9f421e6e25599c53abdcede3dc35f8",
-            "description": "Token from outh request"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{  \r\n   \"CustomerOrderSearchRequest\":{  \r\n      \"OrderHeader\":{  \r\n         \"OrderId\":\"456\",\r\n         \"Active\":\"Y\",\r\n         \"OrderType\":[  \r\n            \"MSISDN Swap Order\",\r\n            \"Sales Order\"\r\n         ],\r\n         \"OrderSubType\":\"\",\r\n         \"OrderStatus\":\"IN_PROGRESS\"\r\n      },\r\n      \"OrderItem\":{  \r\n         \"ProductType\":\"\",\r\n         \"SubStatus\":\"\",\r\n         \"Status\":\"\"\r\n      }\r\n   }\r\n}"
-        },
-        "url": "https://api.tele2.com:9006/v1/orders/search",
-        "description": "Gets the product detils for the customer.\n\nNote:\n\n Please get the latest access token before sending the request using the 'Get WSO2 auth token - Step 1' service present in the same folder."
-      },
-      "response": [
-        {
-          "id": "3217855-c554460a-92cc-f907-677f-4785189955a1",
-          "name": "No orders found business exception",
-          "originalRequest": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "X-Api-Key",
-                "value": "OUGIuUc9RpSDTocY97cMbcqACdTVAPTu"
-              },
-              {
-                "key": "Content-Type",
-                "type": "text",
-                "name": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "9f421e6e25599c53abdcede3dc35f8"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{  \r\n   \"CustomerOrderSearchRequest\":{  \r\n      \"OrderHeader\":{  \r\n         \"OrderId\":\"456\",\r\n         \"Active\":\"Y\",\r\n         \"OrderType\":[  \r\n            \"MSISDN Swap Order\",\r\n            \"Sales Order\"\r\n         ],\r\n         \"OrderSubType\":\"\",\r\n         \"OrderStatus\":\"IN_PROGRESS\"\r\n      },\r\n      \"OrderItem\":{  \r\n         \"ProductType\":\"\",\r\n         \"SubStatus\":\"\",\r\n         \"Status\":\"\"\r\n      }\r\n   }\r\n}"
-            },
-            "url": "https://api.tele2.com:9006/v1/orders/search"
-          },
-          "status": "reachable",
-          "code": 200,
-          "_postman_previewlanguage": "json",
-          "header": [
-            {
-              "key": "Connection",
-              "value": "keep-alive",
-              "name": "Connection",
-              "description": "Options that are desired for the connection"
-            },
-            {
-              "key": "Content-Length",
-              "value": "147",
-              "name": "Content-Length",
-              "description": "The length of the response body in octets (8-bit bytes)"
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json",
-              "name": "Content-Type",
-              "description": "The mime type of this content"
-            },
-            {
-              "key": "ConversationId",
-              "value": "3a9f9ec7-46d7-472b-813d-2a2e7166d0aa",
-              "name": "ConversationId",
-              "description": "Custom header"
-            },
-            {
-              "key": "Date",
-              "value": "Tue, 14 Nov 2017 14:38:01 GMT",
-              "name": "Date",
-              "description": "The date and time that the message was sent"
-            },
-            {
-              "key": "Server",
-              "value": "Apigee Router",
-              "name": "Server",
-              "description": "A name for the server"
-            }
-          ],
-          "cookie": [
-            {
-              "expires": "Invalid Date",
-              "httpOnly": false,
-              "domain": "api.tele2.com",
-              "path": "/",
-              "secure": false,
-              "value": "EGAKKIMAFAAA",
-              "key": "lb-cook-47873-wsoapim-64.240-sg-80"
-            },
-            {
-              "expires": "Invalid Date",
-              "httpOnly": true,
-              "domain": "api.tele2.com",
-              "path": "/",
-              "secure": false,
-              "value": "9421b080d10d1c038c08ffffffd6b994",
-              "key": "ssnid"
-            }
-          ],
-          "responseTime": "548",
-          "body": "{\"Status\":{\"StatusName\":\"FAILURE\",\"StatusReason\":\"No orders found\"},\"PagingAndSorting\":{\"PageData\":{\"PageSize\":\"20\",\"TotalPages\":\"0\",\"Index\":\"1\"}}}"
-        }
-      ]
-    }
-  ]
-}
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: orders_v1
+  description: >
+    Collection to test orders_v1 API Proxy
+
+    Consumer: My Tele2 NL
+
+    Provider: TIP; Siebel_NL
+  contact: {}
+host: api.tele2.com:9006
+basePath: /
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /nl/v1/oauth_nl/token:
+    post:
+      description: This API must be used to authenticate the user.
+      summary: /v1/oauth_nl/token Get WSO2 auth token - Step 1
+      tags:
+      - Misc
+      operationId: /v1/oauth_nl/tokenGetWSO2authtoken-Step1
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: X-Api-Key
+        in: header
+        required: true
+        type: string
+        description: Authorization from calling system
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: The value should be 'application/x-www-form-urlencoded'
+      - name: client_id
+        in: formData
+        required: true
+        type: string
+        description: This field requires to have client id, this should be requested and provide by appigee/WSO2
+      - name: client_secret
+        in: formData
+        required: true
+        type: string
+        description: This field requires to have client secret, this should be requested and provide by appigee/WSO2.
+      - name: grant_type
+        in: formData
+        required: true
+        type: string
+        description: The values that can be send in this field is 'refresh_token' or 'password'.
+      - name: username
+        in: formData
+        required: true
+        type: string
+        description: This field should contain the username. It is required when the grant type is password.
+      - name: password
+        in: formData
+        required: true
+        type: string
+        description: This field should contain the password. It is required when the grant type is password.
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/GetWSO2authtokenOK'
+          examples:
+            application/json:
+              uid: 401203
+              token_type: bearer
+              expires_in: 2400
+              refresh_token: 7bcbf7def9e2da21a4bbef6ef546e4
+              access_token: 9f421e6e25599c53abdcede3dc35f8
+              customer_type: 4G/LTE
+              status: 200
+              email: anamewpcftjgnsk16s11ptest0011@tele2.com
+              role: Consumer
+              msisdn: ''
+              resellerShopId: ''
+              applicationLinks:
+              - id: 10313378919
+                application: brite:bill
+              - id: 10313378918
+                application: siebel
+              - id: ''
+                application: cbs
+          headers:
+            Access-Control-Allow-Headers:
+              type: string
+              default: authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction
+            Access-Control-Allow-Methods:
+              type: string
+              default: DELETE,POST,PUT,GET
+            Access-Control-Allow-Origin:
+              type: string
+              default: '*'
+            Cache-Control:
+              type: string
+              default: no-cache, no-store, max-age=0, must-revalidate
+            Connection:
+              type: string
+              default: keep-alive
+            Date:
+              type: string
+              default: Tue, 14 Nov 2017 14:43:44 GMT
+            Expires:
+              type: string
+              default: 0
+            Pragma:
+              type: string
+              default: no-cache
+            Server:
+              type: string
+              default: WSO2-PassThrough-HTTP
+            Transfer-Encoding:
+              type: string
+              default: chunked
+            X-Application-Context:
+              type: string
+              default: application:uat:6060
+            X-Content-Type-Options:
+              type: string
+              default: nosniff
+            X-Frame-Options:
+              type: string
+              default: SAMEORIGIN
+            X-XSS-Protection:
+              type: string
+              default: 1; mode=block
+  /v1/orders/search:
+    post:
+      description: >-
+        Gets the product detils for the customer.
+
+
+        Note:
+
+         Please get the latest access token before sending the request using the 'Get WSO2 auth token - Step 1' service present in the same folder.
+      summary: /v1/orders/search
+      tags:
+      - Misc
+      operationId: /v1/orders/search
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: X-Api-Key
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Authorization
+        in: header
+        required: true
+        type: string
+        description: Token from outh request
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/~1v1~1orders~1searchrequest'
+      responses:
+        200:
+          description: reachable
+          schema:
+            $ref: '#/definitions/Noordersfoundbusinessexception'
+          examples:
+            application/json:
+              Status:
+                StatusName: FAILURE
+                StatusReason: No orders found
+              PagingAndSorting:
+                PageData:
+                  PageSize: 20
+                  TotalPages: 0
+                  Index: 1
+          headers:
+            Connection:
+              type: string
+              default: keep-alive
+            Content-Length:
+              type: string
+              default: 147
+            ConversationId:
+              type: string
+              default: 3a9f9ec7-46d7-472b-813d-2a2e7166d0aa
+            Date:
+              type: string
+              default: Tue, 14 Nov 2017 14:38:01 GMT
+            Server:
+              type: string
+              default: Apigee Router
+      security: []
+definitions:
+  GetWSO2authtokenOK:
+    title: GetWSO2authtokenOK
+    example:
+      uid: 401203
+      token_type: bearer
+      expires_in: 2400
+      refresh_token: 7bcbf7def9e2da21a4bbef6ef546e4
+      access_token: 9f421e6e25599c53abdcede3dc35f8
+      customer_type: 4G/LTE
+      status: 200
+      email: anamewpcftjgnsk16s11ptest0011@tele2.com
+      role: Consumer
+      msisdn: ''
+      resellerShopId: ''
+      applicationLinks:
+      - id: 10313378919
+        application: brite:bill
+      - id: 10313378918
+        application: siebel
+      - id: ''
+        application: cbs
+    type: object
+    properties:
+      uid:
+        type: string
+      token_type:
+        type: string
+      expires_in:
+        type: string
+      refresh_token:
+        type: string
+      access_token:
+        type: string
+      customer_type:
+        type: string
+      status:
+        type: string
+      email:
+        type: string
+      role:
+        type: string
+      msisdn:
+        type: string
+      resellerShopId:
+        type: string
+      applicationLinks:
+        type: array
+        items:
+          $ref: '#/definitions/ApplicationLink'
+    required:
+    - uid
+    - token_type
+    - expires_in
+    - refresh_token
+    - access_token
+    - customer_type
+    - status
+    - email
+    - role
+    - msisdn
+    - resellerShopId
+    - applicationLinks
+  ApplicationLink:
+    title: ApplicationLink
+    example:
+      id: 10313378919
+      application: brite:bill
+    type: object
+    properties:
+      id:
+        type: string
+      application:
+        type: string
+    required:
+    - id
+    - application
+  /v1/orders/searchrequest:
+    title: /v1/orders/searchrequest
+    example:
+      CustomerOrderSearchRequest:
+        OrderHeader:
+          OrderId: 456
+          Active: Y
+          OrderType:
+          - MSISDN Swap Order
+          - Sales Order
+          OrderSubType: ''
+          OrderStatus: IN_PROGRESS
+        OrderItem:
+          ProductType: ''
+          SubStatus: ''
+          Status: ''
+    type: object
+    properties:
+      CustomerOrderSearchRequest:
+        $ref: '#/definitions/CustomerOrderSearchRequest'
+    required:
+    - CustomerOrderSearchRequest
+  CustomerOrderSearchRequest:
+    title: CustomerOrderSearchRequest
+    example:
+      OrderHeader:
+        OrderId: 456
+        Active: Y
+        OrderType:
+        - MSISDN Swap Order
+        - Sales Order
+        OrderSubType: ''
+        OrderStatus: IN_PROGRESS
+      OrderItem:
+        ProductType: ''
+        SubStatus: ''
+        Status: ''
+    type: object
+    properties:
+      OrderHeader:
+        $ref: '#/definitions/OrderHeader'
+      OrderItem:
+        $ref: '#/definitions/OrderItem'
+    required:
+    - OrderHeader
+    - OrderItem
+  OrderHeader:
+    title: OrderHeader
+    example:
+      OrderId: 456
+      Active: Y
+      OrderType:
+      - MSISDN Swap Order
+      - Sales Order
+      OrderSubType: ''
+      OrderStatus: IN_PROGRESS
+    type: object
+    properties:
+      OrderId:
+        type: string
+      Active:
+        type: string
+      OrderType:
+        type: array
+        items:
+          type: string
+      OrderSubType:
+        type: string
+      OrderStatus:
+        type: string
+    required:
+    - OrderId
+    - Active
+    - OrderType
+    - OrderSubType
+    - OrderStatus
+  OrderItem:
+    title: OrderItem
+    example:
+      ProductType: ''
+      SubStatus: ''
+      Status: ''
+    type: object
+    properties:
+      ProductType:
+        type: string
+      SubStatus:
+        type: string
+      Status:
+        type: string
+    required:
+    - ProductType
+    - SubStatus
+    - Status
+  Noordersfoundbusinessexception:
+    title: Noordersfoundbusinessexception
+    example:
+      Status:
+        StatusName: FAILURE
+        StatusReason: No orders found
+      PagingAndSorting:
+        PageData:
+          PageSize: 20
+          TotalPages: 0
+          Index: 1
+    type: object
+    properties:
+      Status:
+        $ref: '#/definitions/Status'
+      PagingAndSorting:
+        $ref: '#/definitions/PagingAndSorting'
+    required:
+    - Status
+    - PagingAndSorting
+  Status:
+    title: Status
+    example:
+      StatusName: FAILURE
+      StatusReason: No orders found
+    type: object
+    properties:
+      StatusName:
+        type: string
+      StatusReason:
+        type: string
+    required:
+    - StatusName
+    - StatusReason
+  PagingAndSorting:
+    title: PagingAndSorting
+    example:
+      PageData:
+        PageSize: 20
+        TotalPages: 0
+        Index: 1
+    type: object
+    properties:
+      PageData:
+        $ref: '#/definitions/PageData'
+    required:
+    - PageData
+  PageData:
+    title: PageData
+    example:
+      PageSize: 20
+      TotalPages: 0
+      Index: 1
+    type: object
+    properties:
+      PageSize:
+        type: string
+      TotalPages:
+        type: string
+      Index:
+        type: string
+    required:
+    - PageSize
+    - TotalPages
+    - Index
+tags:
+- name: Misc
+  description: ''

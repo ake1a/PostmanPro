@@ -73,21 +73,21 @@ paths:
             $ref: '#/definitions/GetWSO2authtokenOK'
           examples:
             application/json:
-              uid: 401203
+              uid: '401203'
               token_type: bearer
-              expires_in: 2400
+              expires_in: '2400'
               refresh_token: 7bcbf7def9e2da21a4bbef6ef546e4
               access_token: 9f421e6e25599c53abdcede3dc35f8
               customer_type: 4G/LTE
-              status: 200
+              status: '200'
               email: anamewpcftjgnsk16s11ptest0011@tele2.com
               role: Consumer
               msisdn: ''
               resellerShopId: ''
               applicationLinks:
-              - id: 10313378919
+              - id: '10313378919'
                 application: brite:bill
-              - id: 10313378918
+              - id: '10313378918'
                 application: siebel
               - id: ''
                 application: cbs
@@ -112,7 +112,7 @@ paths:
               default: Tue, 14 Nov 2017 14:43:44 GMT
             Expires:
               type: string
-              default: 0
+              default: '0'
             Pragma:
               type: string
               default: no-cache
@@ -186,16 +186,16 @@ paths:
                 StatusReason: No orders found
               PagingAndSorting:
                 PageData:
-                  PageSize: 20
-                  TotalPages: 0
-                  Index: 1
+                  PageSize: '20'
+                  TotalPages: '0'
+                  Index: '1'
           headers:
             Connection:
               type: string
               default: keep-alive
             Content-Length:
               type: string
-              default: 147
+              default: '147'
             ConversationId:
               type: string
               default: 3a9f9ec7-46d7-472b-813d-2a2e7166d0aa
@@ -210,21 +210,21 @@ definitions:
   GetWSO2authtokenOK:
     title: GetWSO2authtokenOK
     example:
-      uid: 401203
+      uid: '401203'
       token_type: bearer
-      expires_in: 2400
+      expires_in: '2400'
       refresh_token: 7bcbf7def9e2da21a4bbef6ef546e4
       access_token: 9f421e6e25599c53abdcede3dc35f8
       customer_type: 4G/LTE
-      status: 200
+      status: '200'
       email: anamewpcftjgnsk16s11ptest0011@tele2.com
       role: Consumer
       msisdn: ''
       resellerShopId: ''
       applicationLinks:
-      - id: 10313378919
+      - id: '10313378919'
         application: brite:bill
-      - id: 10313378918
+      - id: '10313378918'
         application: siebel
       - id: ''
         application: cbs
@@ -272,7 +272,7 @@ definitions:
   ApplicationLink:
     title: ApplicationLink
     example:
-      id: 10313378919
+      id: '10313378919'
       application: brite:bill
     type: object
     properties:
@@ -288,7 +288,7 @@ definitions:
     example:
       CustomerOrderSearchRequest:
         OrderHeader:
-          OrderId: 456
+          OrderId: '456'
           Active: Y
           OrderType:
           - MSISDN Swap Order
@@ -309,7 +309,7 @@ definitions:
     title: CustomerOrderSearchRequest
     example:
       OrderHeader:
-        OrderId: 456
+        OrderId: '456'
         Active: Y
         OrderType:
         - MSISDN Swap Order
@@ -332,7 +332,7 @@ definitions:
   OrderHeader:
     title: OrderHeader
     example:
-      OrderId: 456
+      OrderId: '456'
       Active: Y
       OrderType:
       - MSISDN Swap Order
@@ -385,9 +385,9 @@ definitions:
         StatusReason: No orders found
       PagingAndSorting:
         PageData:
-          PageSize: 20
-          TotalPages: 0
-          Index: 1
+          PageSize: '20'
+          TotalPages: '0'
+          Index: '1'
     type: object
     properties:
       Status:
@@ -415,9 +415,9 @@ definitions:
     title: PagingAndSorting
     example:
       PageData:
-        PageSize: 20
-        TotalPages: 0
-        Index: 1
+        PageSize: '20'
+        TotalPages: '0'
+        Index: '1'
     type: object
     properties:
       PageData:
@@ -427,9 +427,9 @@ definitions:
   PageData:
     title: PageData
     example:
-      PageSize: 20
-      TotalPages: 0
-      Index: 1
+      PageSize: '20'
+      TotalPages: '0'
+      Index: '1'
     type: object
     properties:
       PageSize:

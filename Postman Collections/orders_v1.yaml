@@ -38,7 +38,9 @@ paths:
         description: Authorization from calling system
       - name: Content-Type
         in: header
-        required: true
+        required: false
+        enum:
+        - application/x-www-form-urlencoded
         type: string
         description: The value should be 'application/x-www-form-urlencoded'
       - name: client_id
@@ -160,7 +162,9 @@ paths:
         description: ''
       - name: Content-Type
         in: header
-        required: true
+        required: false
+        enum:
+        - application/json
         type: string
         description: ''
       - name: Authorization

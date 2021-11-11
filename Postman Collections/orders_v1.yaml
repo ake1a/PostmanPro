@@ -11,6 +11,7 @@ info:
   contact: {}
 host: api.tele2.com:9006
 basePath: /
+securityDefinitions: {}
 schemes:
 - https
 consumes:
